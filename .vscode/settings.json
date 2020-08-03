@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/zarkopafilis/Desktop/tf-indicators/env/bin/python3",
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}
