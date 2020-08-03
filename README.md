@@ -16,15 +16,16 @@ import tensorflow_technical_indicators as tfti
 
 ## List of Indicators
 
-| Indicator                 | Implementation |
-| :------------------------ | :------------- |
-| MA                        | planned        |
-| RSI                       |                |
-| MACD                      |                |
-| Stochastic Oscillator     |                |
-| Bolliger Bands            |                |
-| Fibonacci Retractment     |                |
-| Ichimoku Cloud            |                |
-| Standard Deviation        |                |
-| Average Directional Index |                |
-| More                      | To Come        |
+| Indicator                 | Implementation               |
+| :------------------------ | :--------------------------- |
+| SMA                       | `simple_moving_average`      |
+| EMA                       | `exponential_moving_average` |
+| RSI                       |                              |
+| MACD                      |                              |
+| Stochastic Oscillator     |                              |
+| Bolliger Bands            |                              |
+| Fibonacci Retractment     |                              |
+| Ichimoku Cloud            |                              |
+| Standard Deviation        |                              |
+| Average Directional Index |                              |
+| More                      | To Come                      |
