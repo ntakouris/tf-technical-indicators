@@ -45,6 +45,14 @@ class RsiTest(tf.test.TestCase):
             [[100], [100], [50], [80], [66.6666], [60], [42.857143]])
         self.assertAllClose(result, expected, rtol=1e-02)
 
+    def testRsiExponentialDoesNotCrash(self):
+        # Arrange
+        series = tf.constant(
+            [[1], [2], [1], [5], [3], [6], [2]], dtype=tf.float32)
+
+        # Act
+        rsi(series, time_window=2, method='ema')
+
 
 if __name__ == '__main__':
     tf.compat.v1.enable_v2_behavior()

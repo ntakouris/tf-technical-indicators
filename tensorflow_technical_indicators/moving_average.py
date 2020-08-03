@@ -2,7 +2,7 @@ import tensorflow as tf
 
 
 @tf.function
-def simple_moving_average(candles, window_size):
+def simple_moving_average(candles, window_size=7):
 
     moving_average = tf.TensorArray(tf.float32, candles.shape[0])
 
@@ -18,7 +18,7 @@ def simple_moving_average(candles, window_size):
 
 
 @tf.function
-def exponential_moving_average(candles, window_size):
+def exponential_moving_average(candles, window_size=9):
     moving_average = tf.TensorArray(tf.float32, candles.shape[0])
 
     initial_sma = tf.reduce_sum(candles[:window_size], axis=0) / window_size

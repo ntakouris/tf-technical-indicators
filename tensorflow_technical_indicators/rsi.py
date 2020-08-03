@@ -1,5 +1,5 @@
 import tensorflow as tf
-from .moving_average import simple_moving_average
+from .moving_average import simple_moving_average, exponential_moving_average
 
 
 @tf.function
@@ -21,12 +21,14 @@ def downday(series):
 
 
 @ tf.function
-def rsi(series, time_window):
+def rsi(series, time_window=7, method='sma'):
     up = upday(series)
     down = downday(series)
 
-    maup = simple_moving_average(up, time_window)
-    madown = simple_moving_average(down, time_window)
+    maup = simple_moving_average(
+        up, time_window) if method == 'sma' else exponential_moving_average(up, time_window)
+    madown = simple_moving_average(
+        down, time_window) if method == 'sma' else exponential_moving_average(down, time_window)
 
     rs = maup / madown
 
