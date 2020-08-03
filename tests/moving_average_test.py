@@ -9,7 +9,7 @@ class MovingAverageTest(tf.test.TestCase):
     def setUp(self):
         super(MovingAverageTest, self).setUp()
 
-    def testSimpleMovingAverageWorksNoTrim(self):
+    def testSimpleMovingAverageWorksNoTrimOneDim(self):
 
         # Arrange
         candles = tf.constant([
@@ -24,8 +24,33 @@ class MovingAverageTest(tf.test.TestCase):
             candles=candles, window_size=2, trim_window=False)
 
         # Assert
-        expected = tf.reshape(tf.constant(
-            [5, 7.5, 12.5, 20], dtype=tf.float32), shape=(4, 1))
+        expected = tf.constant([
+            [5],
+            [7.5],
+            [12.5],
+            [20]])
+        self.assertAllClose(sma, expected)
+
+    def testSimpleMovingAverageWorksNoTrimManyDims(self):
+
+        # Arrange
+        candles = tf.constant([
+            [5, 5],
+            [10, 15],
+            [15, 20],
+            [25, 30]
+        ], dtype=tf.float32)
+
+        # Act
+        sma = simple_moving_average(
+            candles=candles, window_size=2, trim_window=False)
+
+        # Assert
+        expected = tf.constant([
+            [5, 5],
+            [7.5, 10],
+            [12.5, 17.5],
+            [20, 25]])
         self.assertAllClose(sma, expected)
 
     def testSimpleMovingAverageWorksWithTrim(self):
