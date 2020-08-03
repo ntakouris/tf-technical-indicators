@@ -8,13 +8,14 @@ class FeaturesTest(tf.test.TestCase):
         super(FeaturesTest, self).setUp()
 
     def testOHLCVColumnGettersWork(self):
+
         # Arrange
         candles = tf.constant([
-            [0, 0, 0, 0, 0],  # open
-            [1, 1, 1, 1, 1],  # high
-            [2, 2, 2, 2, 2],  # low
-            [3, 3, 3, 3, 3],  # close
-            [4, 4, 4, 4, 4]  # volume
+            [0, 1, 2, 3, 4],  # open
+            [0, 1, 2, 3, 4],  # high
+            [0, 1, 2, 3, 4],  # low
+            [0, 1, 2, 3, 4],  # close
+            [0, 1, 2, 3, 4]  # volume
         ], dtype=tf.float32)
 
         # Act

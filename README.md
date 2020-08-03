@@ -11,7 +11,7 @@ Technical Indicators as TF Graph Functions!
 
 import tensorflow_technical_indicators as tfti
 
-# inputs are tensors with shape (time_steps, OHLCV)
+# inputs are tensors with shape (time_steps, OHLCV / features)
 ```
 
 ## List of Indicators
