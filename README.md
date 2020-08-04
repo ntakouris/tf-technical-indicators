@@ -11,6 +11,7 @@ Technical Indicators as TF Graph Functions!
 
 ![Tests](https://github.com/ntakouris/tf-technical-indicators/workflows/Test%20Python%20Package/badge.svg)
 
+(Coverage % is bad because tf graphs are not traced, only the `@tf.function`)
 [![codecov](https://codecov.io/gh/ntakouris/tf-technical-indicators/branch/master/graph/badge.svg)](https://codecov.io/gh/ntakouris/tf-technical-indicators)
 
 ## Usage
