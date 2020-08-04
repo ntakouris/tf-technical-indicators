@@ -7,7 +7,7 @@ Technical Indicators as TF Graph Functions!
 
 `pip install tensorflow-technical-indicators`
 
-[![PyPI version](https://badge.fury.io/py/tensorflow-technical-indicators.svg)](https://badge.fury.io/py/fluent-tfx)
+[![PyPI version](https://badge.fury.io/py/tensorflow-technical-indicators.svg)](https://badge.fury.io/py/tensorflow-technical-indicators)
 
 ![Tests](https://github.com/ntakouris/tf-technical-indicators/workflows/Test%20Python%20Package/badge.svg)
 
