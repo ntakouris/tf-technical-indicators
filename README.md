@@ -1,4 +1,4 @@
-# tf-technical-indicators
+# tensorflow-technical-indicators
 
 Technical Indicators as TF Graph Functions!
 
