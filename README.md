@@ -5,6 +5,14 @@ Technical Indicators as TF Graph Functions!
     - Compatible with the rest of the tensorflow ecosystem
     - Super fast as tensorflow graph code
 
+`pip install tensorflow-technical-indicators`
+
+[![PyPI version](https://badge.fury.io/py/tensorflow-technical-indicators.svg)](https://badge.fury.io/py/fluent-tfx)
+
+![Tests](https://github.com/ntakouris/tf-technical-indicators/workflows/Test%20Python%20Package/badge.svg)
+
+[![codecov](https://codecov.io/gh/ntakouris/tf-technical-indicators/branch/master/graph/badge.svg)](https://codecov.io/gh/ntakouris/tf-technical-indicators)
+
 ## Usage
 
 ```python
@@ -32,7 +40,9 @@ result = tfti.indicator(candles, ..params..)
 
 ## List of Indicators
 
-`from tensorflow_technical_indicators import <indicator>`
+```python
+from tensorflow_technical_indicators import <indicator>
+```
 
 | Indicator                 | Implementation               |
 | :------------------------ | :--------------------------- |
