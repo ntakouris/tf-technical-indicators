@@ -13,7 +13,7 @@ setuptools.setup(
     description="Technical Indicators as TensorFlow Graph Functions",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url="https://github.com/ntakouris/tensorflow-technical-indicators",
+    url="https://github.com/ntakouris/tf-technical-indicators",
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
